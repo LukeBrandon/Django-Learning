@@ -1,3 +1,5 @@
+from rest_framework import routers
+from polls import views
 """DjangoLearning URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -16,7 +18,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+router = routers.DefaultRouter()
+router.register(r'questions', views.QuestionViewSet)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('polls/', include('polls.urls')),
+    # rest framework thing
+    path('', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
