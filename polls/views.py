@@ -1,14 +1,15 @@
-from tkinter import W
+
 from django.http import  HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from django.views import generic
 from rest_framework import viewsets, permissions
 from rest_framework.response import Response
-from polls import serializers
 
-from polls.serializers import QuestionSerializer
-from .models import Choice, Question
+from polls.serializers.question import QuestionSerializer
+from polls.models.choice import Choice 
+from polls.models.question import Question 
+
 
 # Sending HTML to clients
 class IndexView(generic.ListView):
