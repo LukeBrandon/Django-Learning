@@ -1,0 +1,8 @@
+{
+  "python.pythonPath": "/opt/homebrew/anaconda3/envs/django/bin/python",
+  "python.defaultInterpreterPath": "/opt/homebrew/anaconda3/envs/django/bin/python",
+  "python.terminal.activateEnvironment": true,
+  "python.testing.pytestArgs": ["."],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true
+}

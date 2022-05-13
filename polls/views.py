@@ -44,7 +44,7 @@ class QuestionDetailViewSet(viewsets.ModelViewSet):
         return obj
 
     def retrieve(self, request, pk=None):
-        print("retrieving")
+        print("retrieving question with id ", pk)
         return Response(QuestionSerializer(self.get_object()).data)
 
 

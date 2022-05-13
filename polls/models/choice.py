@@ -1,7 +1,7 @@
 
 from django.db import models
 from django.utils import timezone
-from polls.models.question import Question
+from .question import Question
 import datetime
 
 class Choice(models.Model):

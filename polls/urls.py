@@ -5,7 +5,6 @@ app_name = "polls"
 
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
-    path('JSON', views.QuestionDetailViewSet.as_view({"get": "list"}), name='indexlist'),
     #ex: /polls/2/
     path('<int:pk>/', views.QuestionDetailViewSet.as_view({"get": "retrieve"}), name='detail'),
     #ex: /polls/2/results
